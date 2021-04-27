@@ -14,3 +14,22 @@ fetch("https://api.exchangerate.host/latest")
   .then(function(data2) {
     console.log(data2);
   });
+
+  (function ($) {
+    $(function () {
+
+        //initialize all modals           
+        $('.modal').modal();
+
+        //now you can open modal from code
+        $('#modal1').modal('open');
+
+        //or by click on trigger
+        $('.trigger-modal').modal();
+
+    }); // end of document ready
+})(jQuery); // end of jQuery name space
+  
+  
+  
+  
