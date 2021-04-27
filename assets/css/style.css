@@ -1,7 +1,30 @@
-.headerCSS {
+
+/* header */
+/* .headerCSS {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
+.links {
+    padding: 3%;
+    justify-content: space-evenly;
+} */
+
+/* background image */
+/* #backgroundImage {
+    background-image:
+    linear-gradient(to bottom, rgba(0,0,0,1), transparent),
+    url("../Images/Cryptocurrency.jpeg");
+background-size: cover;
+background-position: center;
+justify-content: center;
+flex-wrap: wrap;
+align-items: flex-start;
+background-attachment: fixed;
+} */
+
+#introParagraph {
+    text-align: center;
+}
