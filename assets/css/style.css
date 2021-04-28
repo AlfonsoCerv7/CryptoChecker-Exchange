@@ -1,13 +1,13 @@
-
+/* header CSS */
+#titleCSS {
+    text-align: center;
+}
 
 /* main body CSS */
 #introParagraph {
     text-align: center;
 }
 
-main {
-    height: 80%;
-}
 
 /* footer CSS */
 #footerCSS {
