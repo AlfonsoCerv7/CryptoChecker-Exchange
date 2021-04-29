@@ -35,5 +35,6 @@ fetch("https://api.exchangerate.host/convert?from=BTC&to=EUR")
 // localStorage.setItem('userinput', data.coins[0]);
 // localStorage.setItem('userinput', data2.result);
 // this will send the local storage to the wishlist, but we will have to make a loop or create a new element per time the funciton is run so it is saving multiple iterations rather than replacing the same one.
-// document.getElementById("*wishlistid*").innerHTML = userinput + " *currency symbol*"+ localStorage.getItem('userinput'); + " " + today;
 
+// make list element for creation/populating 
+// document.getElementById("*wishlistid*").innerHTML = userinput + " *currency symbol*"+ localStorage.getItem('userinput'); + " " + today;
