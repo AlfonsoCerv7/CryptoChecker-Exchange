@@ -17,6 +17,8 @@
             <a href="https://robinhood.com/us/en/" target="_blank">RobinHood</a>
             <a href="https://coinlist.co/" target="_blank">CoinList</a>
             <a href="https://www.coinbase.com/" target="_blank">CoinBase</a>
+            <a href="https://exchangerate.host/#/" target="_blank">ExchangeRate.host</a>
+            <a href="https://coinlib.io/apidocs" target="_blank">Coinlib.io</a>
         </nav>
     </header>
 
@@ -30,7 +32,36 @@
 
     <div class="row">
         <div class="col s3">
-            side panel
+            <p>Search the Crypto from the list provided!</p>
+
+            <!-- select a crypto -->
+            <form>
+                <div class="input-field">
+                <label for="crypto"></label>
+                    <select style="display: block" name="cars" id="cars">
+                        <option value="Bitcoin">Bitcoin</option>
+                        <option value="Etherium">Etherium Classic</option>
+                        <option value="DOGE">DOGE</option>
+                        <option value="Monero">Monero</option>
+                        <option value="TRON">TRON</option>
+                    </select>
+                </div>
+
+
+            <!-- select a foreign exchange -->
+                <label for="foreignExchRate">Choose a Country:</label>
+                <select style="display: block" name="cars" id="cars">
+                    <option value="Canda">Canada</option>
+                    <option value="Europe">Europe</option>
+                    <option value="Mexico">Mexico</option>
+                    <option value="Australia">Australia</option>
+                    <option value="British Columbia">Britich Columbia</option>
+                </select>
+            </form>
+
+            <br></br>
+
+            <button id="cryptoSearchButton">Search</button>
         </div>
         <div class="col s9">
             main body
