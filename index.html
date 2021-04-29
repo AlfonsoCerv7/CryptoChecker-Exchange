@@ -37,30 +37,32 @@
             <!-- select a crypto -->
             <form>
                 <div class="input-field">
-                <label for="crypto"></label>
-                    <select style="display: block" name="cars" id="cars">
-                        <option value="Bitcoin">Bitcoin</option>
-                        <option value="Etherium">Etherium Classic</option>
+                    <select name="crypto" id="crypto">
+                        <option value="">Choose a Crypto</option>
+                        <option value="BTC">Bitcoin</option>
+                        <option value="ETC">Etherium Classic</option>
                         <option value="DOGE">DOGE</option>
-                        <option value="Monero">Monero</option>
-                        <option value="TRON">TRON</option>
+                        <option value="XMR">Monero</option>
+                        <option value="TRX">TRON</option>
                     </select>
+                    <label for="crypto">Crypto Currency</label>
                 </div>
 
 
             <!-- select a foreign exchange -->
-                <label for="foreignExchRate">Choose a Country:</label>
-                <select style="display: block" name="cars" id="cars">
-                    <option value="Canda">Canada</option>
-                    <option value="Europe">Europe</option>
-                    <option value="Mexico">Mexico</option>
-                    <option value="Australia">Australia</option>
-                    <option value="British Columbia">Britich Columbia</option>
-                </select>
+                <div class="input-field">
+                    <select name="country" id="country">
+                        <option value="">Choose a Country</option>
+                        <option value="Canda">Canada</option>
+                        <option value="Europe">Europe</option>
+                        <option value="Mexico">Mexico</option>
+                        <option value="Australia">Australia</option>
+                        <option value="British Columbia">Britich Columbia</option>
+                    </select>
+                    <label for="country">Choose a Country</label>
+                </div>
             </form>
-
             <br></br>
-
             <button id="cryptoSearchButton">Search</button>
         </div>
         <div class="col s9">
@@ -99,6 +101,7 @@
     </div>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="./assets/js/crypto.js"></script>
 </body>
