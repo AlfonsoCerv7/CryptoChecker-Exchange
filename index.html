@@ -17,6 +17,8 @@
             <a href="https://robinhood.com/us/en/" target="_blank">RobinHood</a>
             <a href="https://coinlist.co/" target="_blank">CoinList</a>
             <a href="https://www.coinbase.com/" target="_blank">CoinBase</a>
+            <a href="https://exchangerate.host/#/" target="_blank">ExchangeRate.host</a>
+            <a href="https://coinlib.io/apidocs" target="_blank">Coinlib.io</a>
         </nav>
     </header>
 
@@ -30,10 +32,41 @@
 
     <div class="row">
         <div class="col s3">
-            side panel
+            <p>Search the Crypto from the list provided!</p>
+
+            <!-- select a crypto -->
+            <form>
+                <div class="input-field">
+                    <select name="crypto" id="crypto">
+                        <option value="">Choose a Crypto</option>
+                        <option value="BTC">Bitcoin</option>
+                        <option value="ETC">Etherium Classic</option>
+                        <option value="DOGE">DOGE</option>
+                        <option value="XMR">Monero</option>
+                        <option value="TRX">TRON</option>
+                    </select>
+                    <label for="crypto">Crypto Currency</label>
+                </div>
+
+
+            <!-- select a foreign exchange -->
+                <div class="input-field">
+                    <select name="country" id="country">
+                        <option value="">Choose a Country</option>
+                        <option value="Canda">Canada</option>
+                        <option value="Europe">Europe</option>
+                        <option value="Mexico">Mexico</option>
+                        <option value="Australia">Australia</option>
+                        <option value="British Columbia">Britich Columbia</option>
+                    </select>
+                    <label for="country">Choose a Country</label>
+                </div>
+            </form>
+            <br></br>
+            <button id="cryptoSearchButton">Search</button>
         </div>
         <div class="col s9">
-            main body
+            <h1>WATCHLIST SECTION PLACEHOLDER</h1>
         </div>
     </div>
 
@@ -68,6 +101,7 @@
     </div>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="./assets/js/crypto.js"></script>
 </body>

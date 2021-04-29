@@ -1,12 +1,20 @@
+// materialize automatic select css
+$(document).ready(function(){
+  $('select').formSelect();
+});
+
+// add in an event listener that alerts the user they need to select a crypto/country
+// if they select seartch without choosing an option
+
 // var userinput = document.queryselect(*input from html that theyre searching*)
 // var desiredrate = document.queryselect(*input from html of the currency they are getting*)
-//document.getElementById(*id of button*).onclick = Submit;
+
 //document.getElementById(*id of button*).onclick = Submit2;
 // let today = new Date().toLocaleDateString()
 
 
 // this fetch would pull based *userinput* for example btc for eth etc.
-// var Submit = function(){
+document.getElementById('cryptoSearchButton').addEventListener('click', function(){
 fetch("https://coinlib.io/api/v1/coin?key=f2c79808b255e493&symbol=BTC,ETC,DOGE,XMR,TRX")
 .then(function(response) {
   return response.json();
@@ -14,9 +22,13 @@ fetch("https://coinlib.io/api/v1/coin?key=f2c79808b255e493&symbol=BTC,ETC,DOGE,X
 .then(function(data) {
   console.log(data);
   console.log(data.coins[0].price)
+  return data.coins[0].price
+  });
 });
-//return data.coins[0].price
-//});
+
+// on the search button, we need an event listener that grabs the values 
+// in the crypto/country and populate it in the pop-out window
+
 
 // this fetch would pull based on *userinput* in the from, then their desired conversion in "to=desiredrate"
 // var Submit2 = function(){

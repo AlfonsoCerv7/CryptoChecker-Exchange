@@ -3,6 +3,11 @@
     text-align: center;
 }
 
+.headerCSS > .links {
+    display: flex;
+    justify-content: space-evenly;
+}
+
 /* main body CSS */
 #introParagraph {
     text-align: center;
