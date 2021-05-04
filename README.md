@@ -9,12 +9,15 @@ When the user loads the page, we will pull their watchlist from localStorage, th
 through and get the most recent value for each pinned currency. This will be limited to 3-5 currencies.or 
 
 When the user visits the site
+
 Then they will be prompted to enter a Crypto of their choosing
 
 When the crypto populates, it will default USD
+
 Then the user can select a alternate currency from the drop down menu
 
 When the Crypto exchange rate appears
+
 Then the user can add it to a watch list
 
 # website URL needs to go here #
