@@ -12,7 +12,8 @@ $(document).ready(function(){
 document.getElementById('cryptoSearchButton').addEventListener('click', function(){
 var crypto = document.getElementById('crypto').value;
 var country = document.getElementById('country').value;
-let today = new Date().toLocaleDateString()
+let today = new Date().toLocaleDateString() // wip
+console.log(today);
 url = ('https://coinlib.io/api/v1/coin?key=f2c79808b255e493&symbol=' + crypto);
 url2 =('https://api.exchangerate.host/convert?from=' + crypto + '&to='+ country);
 console.log(url);
