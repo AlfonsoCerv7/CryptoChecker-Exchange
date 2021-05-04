@@ -3,7 +3,7 @@ $(document).ready(function () {
   $("select").formSelect();
 });
 
-document.getElementById('cryptoSearchButton').addEventListener('click', function(){
+var main = document.getElementById('cryptoSearchButton').addEventListener('click', function(){
 var crypto = document.getElementById('crypto').value;
 var country = document.getElementById('country').value;
 var today = new Date().toLocaleDateString() 
@@ -32,19 +32,24 @@ var today = new Date().toLocaleDateString()
           console.log(data2);
           console.log(data2.result);
           localStorage.setItem(crypto, data2.result);
+          if(localStorage.getItem(crypto) == data2.result){
+            var watchlistitem = (document.createElement("div").innerHTML =
+              today +
+              " " +
+              crypto +
+              " " +
+              country +
+              " " +
+              localStorage.getItem(crypto));
+            +" ";
+            var innermodal = document.getElementById("innerModal");
+            innermodal.append(watchlistitem);
+              }
+            else{
+            main();
+            }
         });
-      var watchlistitem = (document.createElement("div").innerHTML =
-        today +
-        " " +
-        crypto +
-        " " +
-        country +
-        " " +
-        localStorage.getItem(crypto));
-      +" ";
-      var innermodal = document.getElementById("innerModal");
-      innermodal.append(watchlistitem);
-    }
+      }
   });
 
   document.getElementById("close").addEventListener("click", function() {
@@ -55,9 +60,7 @@ document.getElementById("save").addEventListener("click", function() {
 
   var savedList = document.getElementById("Watchlist");
   var userInput = document.createElement("li")
-  var children = ul.children.length + 1;
-  userInput.setAttribute("id", "element"+children)
-  userInput.appendChild(document.createTextNode(document.getElementById('innerModal').innerHTML));
+  userInput.innerHTML = document.getElementById("innerModal").innerHTML;
   savedList.append(userInput);
   document.getElementById("innerModal").innerHTML = "";
 });
