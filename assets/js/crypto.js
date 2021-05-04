@@ -46,7 +46,9 @@ fetch(url)
     // make list element for creation/populating 
 var watchlistitem = document.createElement("div").innerHTML = crypto + " " + country + " " + localStorage.getItem(crypto); + " " + today + "<br></br>";
 var watchlist = document.getElementById("Watchlist");
-watchlist.append(watchlistitem)
+var innermodal = document.getElementById("innermodal");
+watchlist.append(watchlistitem);
+innermodal.append(watchlistitem);
 });
 
 // on the search button, we need an event listener that grabs the values 
