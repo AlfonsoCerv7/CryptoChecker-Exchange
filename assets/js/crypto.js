@@ -2,7 +2,9 @@
 $(document).ready(function(){
   $('select').formSelect();
 });
-
+$(document).ready(function(){
+  $('.modal').modal();
+})
 // add in an event listener that alerts the user they need to select a crypto/country
 // if they select search without choosing an option
 
@@ -55,4 +57,3 @@ watchlist.append(watchlistitem)
 // localStorage.setItem('userinput', data.coins[0]);
 // localStorage.setItem('userinput', data2.result);
 // this will send the local storage to the wishlist, but we will have to make a loop or create a new element per time the funciton is run so it is saving multiple iterations rather than replacing the same one.
-
