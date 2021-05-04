@@ -19,11 +19,12 @@ url2 =('https://api.exchangerate.host/convert?from=' + crypto + '&to='+ country)
 console.log(url);
 console.log(url2);
 
-//if(url = 'https://coinlib.io/api/v1/coin?key=f2c79808b255e493&symbol='){
-// modal from materialize alerting that they need to pick a cryptocurrency
+if(url = 'https://coinlib.io/api/v1/coin?key=f2c79808b255e493&symbol='){
+  M.toast({html: 'I am a toast!'})
 
-//}
-//else{
+
+}
+else{
 fetch(url)
 .then(function(response) {
   return response.json();
