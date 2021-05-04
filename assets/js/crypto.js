@@ -23,7 +23,6 @@ var today = new Date().toLocaleDateString()
         .then(function (data) {
           console.log(data);
           console.log(data.price);
-          localStorage.setItem(crypto, data.price);
         });
       fetch(url2)
         .then(function (response) {
@@ -34,9 +33,6 @@ var today = new Date().toLocaleDateString()
           console.log(data2.result);
           localStorage.setItem(crypto, data2.result);
         });
-      // these will be under the respective functions for USD and conversion.
-      // the local storage set above
-      // make list element for creation/populating
       var watchlistitem = (document.createElement("div").innerHTML =
         today +
         " " +
@@ -46,11 +42,8 @@ var today = new Date().toLocaleDateString()
         " " +
         localStorage.getItem(crypto));
       +" ";
-      //var watchlist = document.getElementById("Watchlist");
       var innermodal = document.getElementById("innerModal");
-      //watchlist.append(watchlistitem);
       innermodal.append(watchlistitem);
-
     }
   });
 
@@ -60,10 +53,12 @@ var today = new Date().toLocaleDateString()
 
 document.getElementById("save").addEventListener("click", function() {
 
-  var userInput = document.getElementById("innerModal").innerHTML;
-  var watchListItem = document.createElement("div").innerHTML = userInput + document.write("\n");
   var savedList = document.getElementById("Watchlist");
-  savedList.append(watchListItem);
+  var userInput = document.createElement("li")
+  var children = ul.children.length + 1;
+  userInput.setAttribute("id", "element"+children)
+  userInput.appendChild(document.createTextNode(document.getElementById('innerModal').innerHTML));
+  savedList.append(userInput);
   document.getElementById("innerModal").innerHTML = "";
 });
 
