@@ -8,7 +8,7 @@ $(document).ready(function(){
 // add in an event listener that alerts the user they need to select a crypto/country
 // if they select search without choosing an option
 
-// this fetch would pull based *userinput* for example btc for eth etc.
+
 document.getElementById('cryptoSearchButton').addEventListener('click', function(){
 var crypto = document.getElementById('crypto').value;
 var country = document.getElementById('country').value;
@@ -56,9 +56,6 @@ document.getElementById('close').addEventListener('click', function(){
 document.getElementById('innerModal').innerHTML = "";
 
 });
-
-// on the search button, we need an event listener that grabs the values 
-// in the crypto/country and populate it in the pop-out window
 
 
 // these will be under the respective functions for USD and conversion. 
