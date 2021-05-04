@@ -3,10 +3,12 @@ $(document).ready(function () {
   $("select").formSelect();
 });
 
-var main = document.getElementById('cryptoSearchButton').addEventListener('click', function(){
-var crypto = document.getElementById('crypto').value;
-var country = document.getElementById('country').value;
-var today = new Date().toLocaleDateString() 
+var main = document
+  .getElementById("cryptoSearchButton")
+  .addEventListener("click", function () {
+    var crypto = document.getElementById("crypto").value;
+    var country = document.getElementById("country").value;
+    var today = new Date().toLocaleDateString();
 
     url =
       "https://coinlib.io/api/v1/coin?key=f2c79808b255e493&symbol=" + crypto;
@@ -32,7 +34,7 @@ var today = new Date().toLocaleDateString()
           console.log(data2);
           console.log(data2.result);
           localStorage.setItem(crypto, data2.result);
-          if(localStorage.getItem(crypto) == data2.result){
+          if (localStorage.getItem(crypto) == data2.result) {
             var watchlistitem = (document.createElement("div").innerHTML =
               today +
               " " +
@@ -44,29 +46,26 @@ var today = new Date().toLocaleDateString()
             +" ";
             var innermodal = document.getElementById("innerModal");
             innermodal.append(watchlistitem);
-              }
-            else{
+          } else {
             main();
-            }
+          }
         });
-      }
+    }
   });
 
-  document.getElementById("close").addEventListener("click", function() {
-  document.getElementById('innerModal').innerHTML = "";
+document.getElementById("close").addEventListener("click", function () {
+  document.getElementById("innerModal").innerHTML = "";
 });
 
-document.getElementById("save").addEventListener("click", function() {
-
+document.getElementById("save").addEventListener("click", function () {
   var savedList = document.getElementById("Watchlist");
-  var userInput = document.createElement("li")
+  var userInput = document.createElement("li");
   userInput.innerHTML = document.getElementById("innerModal").innerHTML;
   savedList.append(userInput);
   document.getElementById("innerModal").innerHTML = "";
 });
 
-
-// these will be under the respective functions for USD and conversion. 
+// these will be under the respective functions for USD and conversion.
 // localStorage.setItem('userinput', data.coins[0]);
 // localStorage.setItem('userinput', data2.result);
 // this will send the local storage to the wishlist, but we will have to make a loop or create a new element per time the funciton is run so it is saving multiple iterations rather than replacing the same one.
