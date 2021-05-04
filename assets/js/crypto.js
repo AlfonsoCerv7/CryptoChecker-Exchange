@@ -42,20 +42,25 @@ fetch(url)
     console.log(data2);
     console.log(data2.result)
     localStorage.setItem(crypto, data2.result);
-  });
+});
     // these will be under the respective functions for USD and conversion. 
     // the local storage set above
     // make list element for creation/populating 
-var watchlistitem = document.createElement("div").innerHTML = crypto + " " + country + " " + localStorage.getItem(crypto); + " " + today + "<br></br>";
-var watchlist = document.getElementById("Watchlist");
-var innermodal = document.getElementById("innerModal");
-watchlist.append(watchlistitem);
-innermodal.append(watchlistitem);
+  var watchlistitem = document.createElement("div").innerHTML = crypto + " " + country + " " + localStorage.getItem(crypto); + " " + today + "<br></br>";
+  var watchlist = document.getElementById("Watchlist");
+  var innermodal = document.getElementById("innerModal");
+  innermodal.append(watchlistitem);
 });
 
-document.getElementById('close').addEventListener('click', function(){
-document.getElementById('innerModal').innerHTML = "";
+  document.getElementById("close").addEventListener("click", function() {
+  document.getElementById('innerModal').innerHTML = "";
+});
 
+document.getElementById("save").addEventListener("click", function() {
+  var userInput = document.getElementById("innerModal").innerHTML;
+  var savedList = document.getElementById("Watchlist");
+  savedList.append(userInput);
+  document.getElementById("innerModal").innerHTML = "";
 });
 
 
