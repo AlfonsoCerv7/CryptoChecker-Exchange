@@ -24,7 +24,7 @@ var main = document
         })
         .then(function (data) {
           console.log(data);
-          console.log(data.price);
+          console.log(data.price); // might need to fix this
         });
       fetch(url2)
         .then(function (response) {
@@ -43,11 +43,30 @@ var main = document
               country +
               " " +
               localStorage.getItem(crypto));
-            +" ";
+            
             var innermodal = document.getElementById("innerModal");
             innermodal.append(watchlistitem);
+            var tracker = 0; // tracker gimmick may be wrong. 
+            var recentHistory = document.getElementById("searchHistory")
+            var savedHistory = crypto + ", " + country;
+            var historyList = document.createElement("li");
+            historyList.setAttribute("id", tracker);
+            var searchButton = document.createElement("button");
+            searchButton.innerHTML = "Search for this again!";
+            searchButton.setAttribute("id", tracker)
+            historyList.innerHTML = savedHistory;
+            recentHistory.append(historyList);
+            recentHistory.append(searchButton);
+            ++tracker; 
+            
+            searchButton.addEventListener ("click", function() {
+              if(searchButton.getAttribute("id") == historyList.getAttribute("id")){
+                
+                alert("wip");
+              }
+            });
           } else {
-            main();
+            main(); // runs function again if values arent equal to one another.
           }
         });
     }
@@ -59,13 +78,10 @@ document.getElementById("close").addEventListener("click", function () {
 
 document.getElementById("save").addEventListener("click", function () {
   var savedList = document.getElementById("Watchlist");
-  var userInput = document.createElement("li");
-  userInput.innerHTML = document.getElementById("innerModal").innerHTML;
-  savedList.append(userInput);
+  var savedCoins = document.createElement("li");
+  savedCoins.innerHTML = document.getElementById("innerModal").innerHTML;
+  localStorage.setItem(savedCoins, savedCoins.innerHTML);
+  savedList.append(savedCoins);
   document.getElementById("innerModal").innerHTML = "";
+  M.toast({ html: "Your search has been saved!" });
 });
-
-// these will be under the respective functions for USD and conversion.
-// localStorage.setItem('userinput', data.coins[0]);
-// localStorage.setItem('userinput', data2.result);
-// this will send the local storage to the wishlist, but we will have to make a loop or create a new element per time the funciton is run so it is saving multiple iterations rather than replacing the same one.
