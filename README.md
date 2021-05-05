@@ -20,6 +20,6 @@ When the Crypto exchange rate appears
 
 Then the user can add it to a watch list
 
-# website URL needs to go here #
+# https://alfonsocerv7.github.io/CryptoChecker-Exchange/ #
 
 <img width="1440" alt="Screen Shot 2021-05-04 at 12 53 23 AM" src="https://user-images.githubusercontent.com/80353368/116965350-2fe9cc80-ac73-11eb-9fa5-8c87d7ea0b0b.png">
