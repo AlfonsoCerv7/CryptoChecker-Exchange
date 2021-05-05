@@ -60,6 +60,7 @@ document.getElementById("save").addEventListener("click", function() {
 
   var savedList = document.getElementById("Watchlist");
   var userInput = document.createElement("li")
+  userInput.className = "savedWatchlistItems";
   userInput.innerHTML = document.getElementById("innerModal").innerHTML;
   savedList.append(userInput);
   document.getElementById("innerModal").innerHTML = "";

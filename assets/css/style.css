@@ -10,8 +10,6 @@
 
 /* search history */
 #searchHistory {
-    border: 2px solid #9e9e9e;
-    border-radius: 1%;
     height: 300px;
     margin-top: 1%;
 }
@@ -21,16 +19,31 @@
     text-align: center;
     font-size: large;
 }
-#searchButtonModal{
+#searchButtonModal {
 padding-bottom: 2%;
 margin-bottom: 1%;
+}
 
+#buttonCSS {
+    padding-left: none;
 }
 
 .mainBodyCSS {
     height: 500px;
     border: 2px solid #9e9e9e;
     border-radius: 1%;
+}
+
+/* li created by js for watchlist */
+.savedWatchlistItems {
+    width: 150px;
+    border: 2px solid #9e9e9e;
+    padding: 1%;
+    margin: 5px;
+    border-radius: 1%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 

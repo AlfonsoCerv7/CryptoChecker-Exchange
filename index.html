@@ -42,7 +42,7 @@
                 <form>
                     <div class="input-field">
                         <select name="crypto" id="crypto">
-                            <option value="">Choose a Crypto</option>
+                            <option value=""></option>
                             <option value="BTC">Bitcoin</option>
                             <option value="ETC">Etherium Classic</option>
                             <option value="DOGE">DOGE</option>
@@ -54,7 +54,7 @@
                     <!-- select a foreign exchange -->
                     <div class="input-field">
                         <select name="country" id="country">
-                            <option value="null">Choose a Country</option>
+                            <option value="null"></option>
                             <option value="USD">USA</option>
                             <option value="CAD">Canada</option>
                             <option value="EUR">Europe</option>
@@ -67,10 +67,11 @@
                 </form>
                 
                 <div class="container" id="searchButtonModal">
-                    <h3 style="font-size: medium;">Press this button to view Crypto/Currency rate</h3>
-                    <!-- Modal Trigger -->
-                    <a class="waves-effect waves-light btn red darken-1 modal-trigger" href="#demo-modal" id="cryptoSearchButton">Search</a>
-
+                    <div id="buttonCSS">
+                        <h3 style="font-size: medium;">Press this button to view Crypto/Currency rate</h3>
+                        <!-- Modal Trigger -->
+                        <a class="waves-effect waves-light btn red darken-1 modal-trigger" href="#demo-modal" id="cryptoSearchButton">Search</a>
+                    </div>
                     <!-- Modal Structure -->
                     <div id="demo-modal" class="modal">
                         <div class="modal-content">
@@ -87,15 +88,11 @@
                     </div>
                 </div>
 
-                <div id="searchHistory">
-                    Recent History
-                </div>
+                <div id="searchHistory"></div>
             </div>
 
             <!-- right column -->
-            <ul id='Watchlist' class="col s9 mainBodyCSS">
-                
-            </ul>
+            <ul id='Watchlist' class="col s9 mainBodyCSS"></ul>
 
     </main>
     <footer id="footerCSS">
