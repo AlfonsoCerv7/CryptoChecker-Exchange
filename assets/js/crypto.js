@@ -78,17 +78,10 @@ document.getElementById("close").addEventListener("click", function () {
 
 document.getElementById("save").addEventListener("click", function () {
   var savedList = document.getElementById("Watchlist");
-<<<<<<< HEAD
-  var userInput = document.createElement("li")
-  userInput.className = "savedWatchlistItems";
-  userInput.innerHTML = document.getElementById("innerModal").innerHTML;
-  savedList.append(userInput);
-=======
   var savedCoins = document.createElement("li");
   savedCoins.innerHTML = document.getElementById("innerModal").innerHTML;
   localStorage.setItem(savedCoins, savedCoins.innerHTML);
   savedList.append(savedCoins);
->>>>>>> ef4e2ac325cc02d08a3638c06e4e7215b090f498
   document.getElementById("innerModal").innerHTML = "";
   M.toast({ html: "Your search has been saved!" });
 });
